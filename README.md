@@ -1,13 +1,13 @@
 # logioptions-bash-script
-Run this when Logi options+ breaks your mouse functionality and freezes on loading due to their certificate mishap.
+Run this when Logi options+ breaks your mouse functionality and freezes on loading due to Logitechs certificate mishap.
 
-## macOS Tahoe Script
+## macOS Script
 
 ### Usage
-The script `fix-logioptions-macos-tahoe.sh` automates the process of fixing Logi Options+ on macOS Tahoe by manipulating system time to work around certificate validation issues.
+The script `fix-logioptions.sh` automates the process of fixing Logi Options+ on macOS Tahoe by manipulating system time to work around certificate validation issues.
 
 ```bash
-sudo ./fix-logioptions-macos-tahoe.sh
+sudo ./fix-logioptions.sh
 ```
 
 **Note:** This script requires sudo privileges to modify system time settings.
