@@ -1,5 +1,5 @@
 # logioptions-bash-script
-Run this when Logi options+ breaks your mouse functionallity and freezes on loading due to their certificate misshap.
+Run this when Logi options+ breaks your mouse functionality and freezes on loading due to their certificate mishap.
 
 ## macOS Tahoe Script
 

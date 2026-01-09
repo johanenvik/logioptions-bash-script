@@ -24,12 +24,9 @@ echo "Step 1: Disabling automatic time..."
 systemsetup -setusingnetworktime off
 
 echo "Step 2: Setting date back by one year..."
-# Get current date and calculate one year ago
-CURRENT_DATE=$(date +"%m/%d/%Y")
+# Calculate one year ago
 CURRENT_YEAR=$(date +"%Y")
 ONE_YEAR_AGO=$((CURRENT_YEAR - 1))
-NEW_DATE=$(date +"%m/%d")/$ONE_YEAR_AGO
-NEW_TIME=$(date +"%H:%M:%S")
 
 # Set the system date
 date "$ONE_YEAR_AGO$(date +%m%d%H%M.%S)"
@@ -37,7 +34,7 @@ echo "Date set to: $(date)"
 
 echo "Step 3: Force quitting Logi Options+..."
 # Try to kill the process if it's running
-LOGI_PID=$(pgrep -x "Logi Options+" 2>/dev/null || echo "")
+LOGI_PID=$(pgrep -f "Logi Options+" 2>/dev/null | head -n 1 || echo "")
 if [ -n "$LOGI_PID" ]; then
     kill "$LOGI_PID" 2>/dev/null || true
     sleep 2
